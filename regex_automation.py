@@ -1,4 +1,5 @@
 import pyperclip,re
+
 #Regex of phone_number
 phone_regex = re.compile(r'''(
                                 (\d{1,4}|\(\d{1,4}\))
@@ -18,13 +19,19 @@ email_regex = re.compile(r'''(
 #Search text in clip-board
 text = str(pyperclip.paste())
 matches = []
+
+# Search phone number in clip-board
 for groups in phone_regex.findall(text):
     phone_num = '-'.join([groups[1],groups[3],groups[5]])
     if(groups[8]) != '':
         phone_num += ' x' + groups[8]
     matches.append(phone_num)
+
+# Search e-mail address in clip-board
 for groups in email_regex.findall(text):
     matches.append(groups[0])
+    
+# Copy only phone number and e-mail address to clip-board
 if len(matches) > 0:
     pyperclip.copy('\n'.join(matches))
     print("Copied")
