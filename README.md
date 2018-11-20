@@ -14,3 +14,10 @@ You can confirm whether your password is strong, or not. Strong password means h
 Du kannst die Staerke dein Paswort pruefen. Hier bedeutet die Staerke dass, dein Passwort ist mehr als Acht und hat Großshrift, Kleinschrift und Zahlen wenigstens. 
 
 パスワードが強いかどうかをチェックするプログラムです。ここで言う強いパスワードとは、大文字と小文字を含み、少なくとも1つ数字がある8以上のパスワードとしています。
+
+## web_scraping
+By this program, you can open top 3 pages in Google's search engine results that are about clipboard's value.
+
+Obtener las 3 mejores páginas de Google que sobre clipboard.
+
+クリップボードにコピーしたのをグーグルで検索したときのトップ3ページを自動的に開きます。
